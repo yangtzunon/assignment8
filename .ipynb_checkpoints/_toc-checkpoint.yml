@@ -7,4 +7,5 @@ chapters:
 - file: markdown
 - file: notebooks
 - file: markdown-notebooks
-- file: Section1
+- file: data_exploration_project
+
