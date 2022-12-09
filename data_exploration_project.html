@@ -50,9 +50,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+    <link rel="prev" title="Interesting Math Problem using Python" href="interesting_math_problem.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,13 +121,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="interesting_math_problem.html">
-   Interesting Math Problem using Python
+  <a class="reference internal" href="markdown-notebooks.html">
+   Notebooks with MyST Markdown
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown-notebooks.html">
-   Notebooks with MyST Markdown
+  <a class="reference internal" href="interesting_math_problem.html">
+   Interesting Math Problem using Python
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -355,6 +357,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-math-equation-in-a-glance">
+   Basic Math Equation in a Glance
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#discussion">
    Discussion
   </a>
@@ -399,6 +406,11 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-math-equation-in-a-glance">
+   Basic Math Equation in a Glance
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#discussion">
    Discussion
   </a>
@@ -430,10 +442,47 @@ I would like to approach the question from the profitability perspective because
 <h1>Method &amp; Result<a class="headerlink" href="#method-result" title="Permalink to this headline">#</a></h1>
 <p>I am going to take a look at the “Disney Movie Total Gross” data set and group the genre together and see if I can find any specific trend. I clean the data that I need, use the group by and sum functions to explore the trend in this dataset.</p>
 </section>
+<section class="tex2jax_ignore mathjax_ignore" id="basic-math-equation-in-a-glance">
+<h1>Basic Math Equation in a Glance<a class="headerlink" href="#basic-math-equation-in-a-glance" title="Permalink to this headline">#</a></h1>
+<p>Before diving into the data exploration, we need to understand the two very basic math formula first</p>
+<ol class="simple">
+<li><p>The sum of first n natural numbers is calculated using the formula</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\sum_{i=1}^n i\)</span> = 1+2+3+…+n =<span class="math notranslate nohighlight">\(\frac{n(n+1)}{2}\)</span></p>
+<ol class="simple">
+<li><p>The mean of n numbers is calculated using the formula</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(\bar x\)</span> = <span class="math notranslate nohighlight">\(\frac{X_{1} + X_{2}+ ... +X_{n}}{n}\)</span>=<span class="math notranslate nohighlight">\(\frac{1}{n}\)</span> (<span class="math notranslate nohighlight">\(\sum \limits _{i=1} ^{n} X_{i}\)</span>)</p>
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="discussion">
 <h1>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">#</a></h1>
 <p>My thought process and the discussion are documented throughout the document.</p>
 <p>First, I import the library that I will need in this analysis.The next step is to load the data and take a look at the different columns.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install altair
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: altair in c:\users\wendy-nb\miniconda3\lib\site-packages (4.2.0)
+Requirement already satisfied: jinja2 in c:\users\wendy-nb\miniconda3\lib\site-packages (from altair) (3.1.2)
+Requirement already satisfied: jsonschema&gt;=3.0 in c:\users\wendy-nb\miniconda3\lib\site-packages (from altair) (3.2.0)
+Requirement already satisfied: entrypoints in c:\users\wendy-nb\miniconda3\lib\site-packages (from altair) (0.4)
+Requirement already satisfied: numpy in c:\users\wendy-nb\miniconda3\lib\site-packages (from altair) (1.23.1)
+Requirement already satisfied: pandas&gt;=0.18 in c:\users\wendy-nb\miniconda3\lib\site-packages (from altair) (1.4.3)
+Requirement already satisfied: toolz in c:\users\wendy-nb\miniconda3\lib\site-packages (from altair) (0.12.0)
+Requirement already satisfied: pyrsistent&gt;=0.14.0 in c:\users\wendy-nb\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (0.18.1)
+Requirement already satisfied: attrs&gt;=17.4.0 in c:\users\wendy-nb\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (21.4.0)
+Requirement already satisfied: six&gt;=1.11.0 in c:\users\wendy-nb\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (1.16.0)
+Requirement already satisfied: setuptools in c:\users\wendy-nb\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (61.2.0)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\users\wendy-nb\miniconda3\lib\site-packages (from pandas&gt;=0.18-&gt;altair) (2022.4)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in c:\users\wendy-nb\miniconda3\lib\site-packages (from pandas&gt;=0.18-&gt;altair) (2.8.2)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in c:\users\wendy-nb\miniconda3\lib\site-packages (from jinja2-&gt;altair) (2.1.1)
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the libraries</span>
@@ -446,21 +495,140 @@ I would like to approach the question from the profitability perspective because
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># import the libraries</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">altair</span> <span class="k">as</span> <span class="nn">alt</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">disney_gross</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/disney_movies_total_gross.csv&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">disney_gross</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;altair&#39;
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>movie_title</th>
+      <th>release_date</th>
+      <th>genre</th>
+      <th>MPAA_rating</th>
+      <th>total_gross</th>
+      <th>inflation_adjusted_gross</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Snow White and the Seven Dwarfs</td>
+      <td>Dec 21, 1937</td>
+      <td>Musical</td>
+      <td>G</td>
+      <td>$184,925,485</td>
+      <td>$5,228,953,251</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Pinocchio</td>
+      <td>Feb 9, 1940</td>
+      <td>Adventure</td>
+      <td>G</td>
+      <td>$84,300,000</td>
+      <td>$2,188,229,052</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Fantasia</td>
+      <td>Nov 13, 1940</td>
+      <td>Musical</td>
+      <td>G</td>
+      <td>$83,320,000</td>
+      <td>$2,187,090,808</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Song of the South</td>
+      <td>Nov 12, 1946</td>
+      <td>Adventure</td>
+      <td>G</td>
+      <td>$65,000,000</td>
+      <td>$1,078,510,579</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Cinderella</td>
+      <td>Feb 15, 1950</td>
+      <td>Drama</td>
+      <td>G</td>
+      <td>$85,000,000</td>
+      <td>$920,608,730</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>574</th>
+      <td>The Light Between Oceans</td>
+      <td>Sep 2, 2016</td>
+      <td>Drama</td>
+      <td>PG-13</td>
+      <td>$12,545,979</td>
+      <td>$12,545,979</td>
+    </tr>
+    <tr>
+      <th>575</th>
+      <td>Queen of Katwe</td>
+      <td>Sep 23, 2016</td>
+      <td>Drama</td>
+      <td>PG</td>
+      <td>$8,874,389</td>
+      <td>$8,874,389</td>
+    </tr>
+    <tr>
+      <th>576</th>
+      <td>Doctor Strange</td>
+      <td>Nov 4, 2016</td>
+      <td>Adventure</td>
+      <td>PG-13</td>
+      <td>$232,532,923</td>
+      <td>$232,532,923</td>
+    </tr>
+    <tr>
+      <th>577</th>
+      <td>Moana</td>
+      <td>Nov 23, 2016</td>
+      <td>Adventure</td>
+      <td>PG</td>
+      <td>$246,082,029</td>
+      <td>$246,082,029</td>
+    </tr>
+    <tr>
+      <th>578</th>
+      <td>Rogue One: A Star Wars Story</td>
+      <td>Dec 16, 2016</td>
+      <td>Adventure</td>
+      <td>PG-13</td>
+      <td>$529,483,936</td>
+      <td>$529,483,936</td>
+    </tr>
+  </tbody>
+</table>
+<p>579 rows × 6 columns</p>
+</div></div></div>
 </div>
 <p>I notice that there are different genres of the movie and I want to have a big picture of how many movies are in each genre. I use the value_counts function to find out the following informaiton.</p>
+<p>Let’s pause and take a look at the original movie poster of <strong>Snow White from 1937</strong></p>
+<p><img alt="Snow White Movie Poster" src="_images/Snow_White_1937_poster.png" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#group by the genre</span>
@@ -475,8 +643,8 @@ Drama                  114
 Action                  40
 Thriller/Suspense       24
 Romantic Comedy         23
-Documentary             16
 Musical                 16
+Documentary             16
 Western                  7
 Horror                   6
 Black Comedy             3
@@ -647,7 +815,7 @@ Name: genre, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x7fb319c8bdc0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x000002360C4B0700&gt;
 </pre></div>
 </div>
 </div>
@@ -920,29 +1088,36 @@ Name: inflation_adjusted_gross, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-283d3959270a4e4e967cab6b4407f0ed"></div>
+<div id="altair-viz-060e504abf3b4d23981ed5025cf0a90f"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-283d3959270a4e4e967cab6b4407f0ed") {
-      outputDiv = document.getElementById("altair-viz-283d3959270a4e4e967cab6b4407f0ed");
+    if (outputDiv.id !== "altair-viz-060e504abf3b4d23981ed5025cf0a90f") {
+      outputDiv = document.getElementById("altair-viz-060e504abf3b4d23981ed5025cf0a90f");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
       "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
       "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -958,16 +1133,14 @@ Name: inflation_adjusted_gross, dtype: int64
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
       require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-bc6c790c0337821371759e75eb49e96e"}, "mark": "bar", "encoding": {"x": {"type": "nominal", "field": "genre", "sort": "-y", "title": "Genre"}, "y": {"type": "quantitative", "field": "inflation_adjusted_gross", "title": "Inflation Adjusted Gross"}}, "title": "Inflation Adjusted Gross by Genre", "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-bc6c790c0337821371759e75eb49e96e": [{"genre": "Action", "inflation_adjusted_gross": 5498936786}, {"genre": "Adventure", "inflation_adjusted_gross": 24561266158}, {"genre": "Black Comedy", "inflation_adjusted_gross": 156730475}, {"genre": "Comedy", "inflation_adjusted_gross": 15409526913}, {"genre": "Concert/Performance", "inflation_adjusted_gross": 114821678}, {"genre": "Documentary", "inflation_adjusted_gross": 203488418}, {"genre": "Drama", "inflation_adjusted_gross": 8195804484}, {"genre": "Horror", "inflation_adjusted_gross": 140483092}, {"genre": "Musical", "inflation_adjusted_gross": 9657565776}, {"genre": "Romantic Comedy", "inflation_adjusted_gross": 1788872933}, {"genre": "Thriller/Suspense", "inflation_adjusted_gross": 2151690954}, {"genre": "Western", "inflation_adjusted_gross": 516709946}]}}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-bc6c790c0337821371759e75eb49e96e"}, "mark": "bar", "encoding": {"x": {"field": "genre", "sort": "-y", "title": "Genre", "type": "nominal"}, "y": {"field": "inflation_adjusted_gross", "title": "Inflation Adjusted Gross", "type": "quantitative"}}, "title": "Inflation Adjusted Gross by Genre", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-bc6c790c0337821371759e75eb49e96e": [{"genre": "Action", "inflation_adjusted_gross": 5498936786}, {"genre": "Adventure", "inflation_adjusted_gross": 24561266158}, {"genre": "Black Comedy", "inflation_adjusted_gross": 156730475}, {"genre": "Comedy", "inflation_adjusted_gross": 15409526913}, {"genre": "Concert/Performance", "inflation_adjusted_gross": 114821678}, {"genre": "Documentary", "inflation_adjusted_gross": 203488418}, {"genre": "Drama", "inflation_adjusted_gross": 8195804484}, {"genre": "Horror", "inflation_adjusted_gross": 140483092}, {"genre": "Musical", "inflation_adjusted_gross": 9657565776}, {"genre": "Romantic Comedy", "inflation_adjusted_gross": 1788872933}, {"genre": "Thriller/Suspense", "inflation_adjusted_gross": 2151690954}, {"genre": "Western", "inflation_adjusted_gross": 516709946}]}}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p>I am also interested in seeing how the movie performed in different years. I create a new colum for their release date and year.</p>
@@ -1123,6 +1296,8 @@ Name: inflation_adjusted_gross, dtype: int64
 </table>
 </div></div></div>
 </div>
+<p>We’ll pause here again to take a look at movie poster from <strong>Cinderella</strong>, my favorite childhood movie</p>
+<p><img alt="Cinderella Movie Poster" src="_images/Cinderella.jpg" /></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">year_group</span> <span class="o">=</span> <span class="n">disney_gross</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
@@ -1131,7 +1306,7 @@ Name: inflation_adjusted_gross, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x7fb319c8b2b0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x000002360F099730&gt;
 </pre></div>
 </div>
 </div>
@@ -1405,29 +1580,36 @@ Other contributing factors could be (1) Inflation adjustment and economic condit
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-2be0dae9b655413f9fd2e687271d31d8"></div>
+<div id="altair-viz-5d7c3db2437f41a39a39220cb77a7e15"></div>
 <script type="text/javascript">
+  var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-2be0dae9b655413f9fd2e687271d31d8") {
-      outputDiv = document.getElementById("altair-viz-2be0dae9b655413f9fd2e687271d31d8");
+    if (outputDiv.id !== "altair-viz-5d7c3db2437f41a39a39220cb77a7e15") {
+      outputDiv = document.getElementById("altair-viz-5d7c3db2437f41a39a39220cb77a7e15");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
       "vega-lib": "https://cdn.jsdelivr.net/npm//vega-lib?noext",
-      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.8.1?noext",
+      "vega-lite": "https://cdn.jsdelivr.net/npm//vega-lite@4.17.0?noext",
       "vega-embed": "https://cdn.jsdelivr.net/npm//vega-embed@6?noext",
     };
 
-    function loadScript(lib) {
-      return new Promise(function(resolve, reject) {
-        var s = document.createElement('script');
-        s.src = paths[lib];
-        s.async = true;
-        s.onload = () => resolve(paths[lib]);
-        s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
-        document.getElementsByTagName("head")[0].appendChild(s);
-      });
+    function maybeLoadScript(lib, version) {
+      var key = `${lib.replace("-", "")}_version`;
+      return (VEGA_DEBUG[key] == version) ?
+        Promise.resolve(paths[lib]) :
+        new Promise(function(resolve, reject) {
+          var s = document.createElement('script');
+          document.getElementsByTagName("head")[0].appendChild(s);
+          s.async = true;
+          s.onload = () => {
+            VEGA_DEBUG[key] = version;
+            return resolve(paths[lib]);
+          };
+          s.onerror = () => reject(`Error loading script: ${paths[lib]}`);
+          s.src = paths[lib];
+        });
     }
 
     function showError(err) {
@@ -1443,16 +1625,14 @@ Other contributing factors could be (1) Inflation adjustment and economic condit
     if(typeof define === "function" && define.amd) {
       requirejs.config({paths});
       require(["vega-embed"], displayChart, err => showError(`Error loading script: ${err.message}`));
-    } else if (typeof vegaEmbed === "function") {
-      displayChart(vegaEmbed);
     } else {
-      loadScript("vega")
-        .then(() => loadScript("vega-lite"))
-        .then(() => loadScript("vega-embed"))
+      maybeLoadScript("vega", "5")
+        .then(() => maybeLoadScript("vega-lite", "4.17.0"))
+        .then(() => maybeLoadScript("vega-embed", "6"))
         .catch(showError)
         .then(() => displayChart(vegaEmbed));
     }
-  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-1aa64d29f3029c9cc737dd21d4a904e4"}, "mark": "bar", "encoding": {"x": {"type": "nominal", "field": "Year", "title": "Year"}, "y": {"type": "quantitative", "field": "inflation_adjusted_gross", "title": "Inflation Adjusted Gross"}}, "title": "Inflation Adjusted Gross by Year", "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json", "datasets": {"data-1aa64d29f3029c9cc737dd21d4a904e4": [{"Year": " 1937", "inflation_adjusted_gross": 5228953251}, {"Year": " 1940", "inflation_adjusted_gross": 4375319860}, {"Year": " 1946", "inflation_adjusted_gross": 1078510579}, {"Year": " 1950", "inflation_adjusted_gross": 920608730}, {"Year": " 1954", "inflation_adjusted_gross": 528279994}, {"Year": " 1955", "inflation_adjusted_gross": 1236035515}, {"Year": " 1959", "inflation_adjusted_gross": 21505832}, {"Year": " 1961", "inflation_adjusted_gross": 1797806719}, {"Year": " 1962", "inflation_adjusted_gross": 109581646}, {"Year": " 1963", "inflation_adjusted_gross": 153870834}, {"Year": " 1967", "inflation_adjusted_gross": 789612346}, {"Year": " 1968", "inflation_adjusted_gross": 138612686}, {"Year": " 1970", "inflation_adjusted_gross": 356362241}, {"Year": " 1971", "inflation_adjusted_gross": 91305448}, {"Year": " 1975", "inflation_adjusted_gross": 131246872}, {"Year": " 1977", "inflation_adjusted_gross": 363659174}, {"Year": " 1979", "inflation_adjusted_gross": 120377374}, {"Year": " 1980", "inflation_adjusted_gross": 43560212}, {"Year": " 1981", "inflation_adjusted_gross": 181636869}, {"Year": " 1982", "inflation_adjusted_gross": 110731153}, {"Year": " 1983", "inflation_adjusted_gross": 100549534}, {"Year": " 1984", "inflation_adjusted_gross": 178132661}, {"Year": " 1985", "inflation_adjusted_gross": 173124212}, {"Year": " 1986", "inflation_adjusted_gross": 577472408}, {"Year": " 1987", "inflation_adjusted_gross": 1186649969}, {"Year": " 1988", "inflation_adjusted_gross": 986841867}, {"Year": " 1989", "inflation_adjusted_gross": 1097851241}, {"Year": " 1990", "inflation_adjusted_gross": 1226460745}, {"Year": " 1991", "inflation_adjusted_gross": 1221190032}, {"Year": " 1992", "inflation_adjusted_gross": 1736349861}, {"Year": " 1993", "inflation_adjusted_gross": 1427312980}, {"Year": " 1994", "inflation_adjusted_gross": 2140690807}, {"Year": " 1995", "inflation_adjusted_gross": 2188599043}, {"Year": " 1996", "inflation_adjusted_gross": 2157238999}, {"Year": " 1997", "inflation_adjusted_gross": 1474848034}, {"Year": " 1998", "inflation_adjusted_gross": 2189031209}, {"Year": " 1999", "inflation_adjusted_gross": 1981582799}, {"Year": " 2000", "inflation_adjusted_gross": 1711675892}, {"Year": " 2001", "inflation_adjusted_gross": 1296291781}, {"Year": " 2002", "inflation_adjusted_gross": 1680599676}, {"Year": " 2003", "inflation_adjusted_gross": 2171244827}, {"Year": " 2004", "inflation_adjusted_gross": 1570219160}, {"Year": " 2005", "inflation_adjusted_gross": 1273982639}, {"Year": " 2006", "inflation_adjusted_gross": 1834744763}, {"Year": " 2007", "inflation_adjusted_gross": 1757479739}, {"Year": " 2008", "inflation_adjusted_gross": 1135356255}, {"Year": " 2009", "inflation_adjusted_gross": 1359908617}, {"Year": " 2010", "inflation_adjusted_gross": 1622535159}, {"Year": " 2011", "inflation_adjusted_gross": 1172578942}, {"Year": " 2012", "inflation_adjusted_gross": 1537669134}, {"Year": " 2013", "inflation_adjusted_gross": 1887863558}, {"Year": " 2014", "inflation_adjusted_gross": 1560791318}, {"Year": " 2015", "inflation_adjusted_gross": 2495662696}, {"Year": " 2016", "inflation_adjusted_gross": 2873393105}]}}, {"mode": "vega-lite"});
+  })({"config": {"view": {"continuousWidth": 400, "continuousHeight": 300}}, "data": {"name": "data-1aa64d29f3029c9cc737dd21d4a904e4"}, "mark": "bar", "encoding": {"x": {"field": "Year", "title": "Year", "type": "nominal"}, "y": {"field": "inflation_adjusted_gross", "title": "Inflation Adjusted Gross", "type": "quantitative"}}, "title": "Inflation Adjusted Gross by Year", "$schema": "https://vega.github.io/schema/vega-lite/v4.17.0.json", "datasets": {"data-1aa64d29f3029c9cc737dd21d4a904e4": [{"Year": " 1937", "inflation_adjusted_gross": 5228953251}, {"Year": " 1940", "inflation_adjusted_gross": 4375319860}, {"Year": " 1946", "inflation_adjusted_gross": 1078510579}, {"Year": " 1950", "inflation_adjusted_gross": 920608730}, {"Year": " 1954", "inflation_adjusted_gross": 528279994}, {"Year": " 1955", "inflation_adjusted_gross": 1236035515}, {"Year": " 1959", "inflation_adjusted_gross": 21505832}, {"Year": " 1961", "inflation_adjusted_gross": 1797806719}, {"Year": " 1962", "inflation_adjusted_gross": 109581646}, {"Year": " 1963", "inflation_adjusted_gross": 153870834}, {"Year": " 1967", "inflation_adjusted_gross": 789612346}, {"Year": " 1968", "inflation_adjusted_gross": 138612686}, {"Year": " 1970", "inflation_adjusted_gross": 356362241}, {"Year": " 1971", "inflation_adjusted_gross": 91305448}, {"Year": " 1975", "inflation_adjusted_gross": 131246872}, {"Year": " 1977", "inflation_adjusted_gross": 363659174}, {"Year": " 1979", "inflation_adjusted_gross": 120377374}, {"Year": " 1980", "inflation_adjusted_gross": 43560212}, {"Year": " 1981", "inflation_adjusted_gross": 181636869}, {"Year": " 1982", "inflation_adjusted_gross": 110731153}, {"Year": " 1983", "inflation_adjusted_gross": 100549534}, {"Year": " 1984", "inflation_adjusted_gross": 178132661}, {"Year": " 1985", "inflation_adjusted_gross": 173124212}, {"Year": " 1986", "inflation_adjusted_gross": 577472408}, {"Year": " 1987", "inflation_adjusted_gross": 1186649969}, {"Year": " 1988", "inflation_adjusted_gross": 986841867}, {"Year": " 1989", "inflation_adjusted_gross": 1097851241}, {"Year": " 1990", "inflation_adjusted_gross": 1226460745}, {"Year": " 1991", "inflation_adjusted_gross": 1221190032}, {"Year": " 1992", "inflation_adjusted_gross": 1736349861}, {"Year": " 1993", "inflation_adjusted_gross": 1427312980}, {"Year": " 1994", "inflation_adjusted_gross": 2140690807}, {"Year": " 1995", "inflation_adjusted_gross": 2188599043}, {"Year": " 1996", "inflation_adjusted_gross": 2157238999}, {"Year": " 1997", "inflation_adjusted_gross": 1474848034}, {"Year": " 1998", "inflation_adjusted_gross": 2189031209}, {"Year": " 1999", "inflation_adjusted_gross": 1981582799}, {"Year": " 2000", "inflation_adjusted_gross": 1711675892}, {"Year": " 2001", "inflation_adjusted_gross": 1296291781}, {"Year": " 2002", "inflation_adjusted_gross": 1680599676}, {"Year": " 2003", "inflation_adjusted_gross": 2171244827}, {"Year": " 2004", "inflation_adjusted_gross": 1570219160}, {"Year": " 2005", "inflation_adjusted_gross": 1273982639}, {"Year": " 2006", "inflation_adjusted_gross": 1834744763}, {"Year": " 2007", "inflation_adjusted_gross": 1757479739}, {"Year": " 2008", "inflation_adjusted_gross": 1135356255}, {"Year": " 2009", "inflation_adjusted_gross": 1359908617}, {"Year": " 2010", "inflation_adjusted_gross": 1622535159}, {"Year": " 2011", "inflation_adjusted_gross": 1172578942}, {"Year": " 2012", "inflation_adjusted_gross": 1537669134}, {"Year": " 2013", "inflation_adjusted_gross": 1887863558}, {"Year": " 2014", "inflation_adjusted_gross": 1560791318}, {"Year": " 2015", "inflation_adjusted_gross": 2495662696}, {"Year": " 2016", "inflation_adjusted_gross": 2873393105}]}}, {"mode": "vega-lite"});
 </script></div></div>
 </div>
 <p>Finally, I created a funtion that take in a dataset and return the top selling genre without going through the steps I did above.</p>
@@ -1498,6 +1678,8 @@ Other contributing factors could be (1) Inflation adjustment and economic condit
 <h1>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">#</a></h1>
 <p>Data source: The dataset used in this analysis is provided in the final assignment</p>
 <p>Supporting resource: I refernce the assignment structure from the Sample Project provided on Canvas</p>
+<p>Snow White Movie poster from <a class="reference external" href="https://en.wikipedia.org/wiki/Snow_White_and_the_Seven_Dwarfs_%281937_film%29">Wikipedia</a></p>
+<p>Cinderella Movie poster from <a class="reference external" href="https://www.ebay.ca/itm/390987093784">ebay</a></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1527,11 +1709,11 @@ Other contributing factors could be (1) Inflation adjustment and economic condit
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="markdown-notebooks.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="interesting_math_problem.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Notebooks with MyST Markdown</p>
+            <p class="prev-next-title">Interesting Math Problem using Python</p>
         </div>
     </a>
 </div>

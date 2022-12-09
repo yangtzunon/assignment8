@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
-    <link rel="prev" title="Markdown Files" href="markdown.html" />
+    <link rel="next" title="Final Project: Data Exploration of the Disney Movie datasets" href="data_exploration_project.html" />
+    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -121,14 +121,14 @@ const thebe_selector_output = ".output, .cell_output"
    Markdown Files
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Interesting Math Problem using Python
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="markdown-notebooks.html">
    Notebooks with MyST Markdown
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Interesting Math Problem using Python
   </a>
  </li>
  <li class="toctree-l1">
@@ -343,18 +343,56 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#markdown-notebooks">
-   Markdown + notebooks
+  <a class="reference internal nav-link" href="#code">
+   Code
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#myst-markdown">
-   MyST markdown
+  <a class="reference internal nav-link" href="#test-data">
+   Test Data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-blocks-and-outputs">
-   Code blocks and outputs
+  <a class="reference internal nav-link" href="#the-math-equation-for-arc-length-2-pi-r-frac-theta-360">
+   The math equation for arc length  = 2
+   <span class="math notranslate nohighlight">
+    \(\pi\)
+   </span>
+   r (
+   <span class="math notranslate nohighlight">
+    \(\frac{\theta}{360}\)
+   </span>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Test Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-math-equation-for-area-of-sector-frac-theta-360-x-pi-r-2">
+   The math equation for area of sector  =
+   <span class="math notranslate nohighlight">
+    \(\frac{\theta}{360}\)
+   </span>
+   x
+   <span class="math notranslate nohighlight">
+    \(\pi\)
+   </span>
+   <span class="math notranslate nohighlight">
+    \(r^2\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resource">
+   Resource
   </a>
  </li>
 </ul>
@@ -377,18 +415,56 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#markdown-notebooks">
-   Markdown + notebooks
+  <a class="reference internal nav-link" href="#code">
+   Code
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#myst-markdown">
-   MyST markdown
+  <a class="reference internal nav-link" href="#test-data">
+   Test Data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-blocks-and-outputs">
-   Code blocks and outputs
+  <a class="reference internal nav-link" href="#the-math-equation-for-arc-length-2-pi-r-frac-theta-360">
+   The math equation for arc length  = 2
+   <span class="math notranslate nohighlight">
+    \(\pi\)
+   </span>
+   r (
+   <span class="math notranslate nohighlight">
+    \(\frac{\theta}{360}\)
+   </span>
+   )
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Test Data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-math-equation-for-area-of-sector-frac-theta-360-x-pi-r-2">
+   The math equation for area of sector  =
+   <span class="math notranslate nohighlight">
+    \(\frac{\theta}{360}\)
+   </span>
+   x
+   <span class="math notranslate nohighlight">
+    \(\pi\)
+   </span>
+   <span class="math notranslate nohighlight">
+    \(r^2\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resource">
+   Resource
   </a>
  </li>
 </ul>
@@ -405,68 +481,32 @@ title="Print to PDF"
 <h1>Interesting Math Problem using Python<a class="headerlink" href="#interesting-math-problem-using-python" title="Permalink to this headline">#</a></h1>
 <p>You can also create content with Jupyter Notebooks. This means that you can include
 code blocks and their outputs in your book.</p>
-<section id="markdown-notebooks">
-<h2>Markdown + notebooks<a class="headerlink" href="#markdown-notebooks" title="Permalink to this headline">#</a></h2>
-<p>As it is markdown, you can embed images, HTML, etc into your posts!</p>
-<p><img alt="" src="https://myst-parser.readthedocs.io/en/latest/_static/logo-wide.svg" /></p>
-<p>You can also <span class="math notranslate nohighlight">\(add_{math}\)</span> and</p>
-<div class="math notranslate nohighlight">
-\[
-math^{blocks}
-\]</div>
-<p>or</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\mbox{mean} la_{tex} \\ \\
-math blocks
-\end{aligned}
-\end{split}\]</div>
-<p>But make sure you $Escape $your $dollar signs $you want to keep!</p>
-</section>
-<section id="myst-markdown">
-<h2>MyST markdown<a class="headerlink" href="#myst-markdown" title="Permalink to this headline">#</a></h2>
-<p>MyST markdown works in Jupyter Notebooks as well. For more information about MyST markdown, check
-out <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST guide in Jupyter Book</a>,
-or see <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/">the MyST markdown documentation</a>.</p>
-</section>
-<section id="code-blocks-and-outputs">
-<h2>Code blocks and outputs<a class="headerlink" href="#code-blocks-and-outputs" title="Permalink to this headline">#</a></h2>
-<p>Jupyter Book will also embed your code blocks and output in your book.
-For example, here’s some sample Matplotlib code:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
-</pre></div>
-</div>
-</div>
-</div>
 <p>To illustrate a few python math exercise, here is the first example:</p>
 <p><strong>Question 1</strong>: Write a Python program to calculate arc length of an angle.</p>
-<p>Note: In a planar geometry, an angle is the figure formed by two rays, called the sides of the angle, sharing a common endpoint, called the vertex of the angle. Angles formed by two rays lie in a plane, but this plane does not have to be a Euclidean plane.
-<br />
-<br />
-<strong>Test Data</strong><br />
-Diameter of a circle : 8<br />
+<p>Note: In a planar geometry, an angle is the figure formed by two rays, called the sides of the angle, sharing a common endpoint, called the vertex of the angle. Angles formed by two rays lie in a plane, but this plane does not have to be a Euclidean plane.</p>
+<section id="code">
+<h2>Code<a class="headerlink" href="#code" title="Permalink to this headline">#</a></h2>
+<p>The code that we will be using is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">arclength</span><span class="p">():</span>
+    <span class="n">pi</span><span class="o">=</span><span class="mi">22</span><span class="o">/</span><span class="mi">7</span>
+    <span class="n">diameter</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Diameter of circle: &#39;</span><span class="p">))</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;angle measure: &#39;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">angle</span> <span class="o">&gt;=</span> <span class="mi">360</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Angle is not possible&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="n">arc_length</span> <span class="o">=</span> <span class="p">(</span><span class="n">pi</span><span class="o">*</span><span class="n">diameter</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">angle</span><span class="o">/</span><span class="mi">360</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Arc Length is: &quot;</span><span class="p">,</span> <span class="n">arc_length</span><span class="p">)</span>
+
+<span class="n">arclength</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="test-data">
+<h2>Test Data<a class="headerlink" href="#test-data" title="Permalink to this headline">#</a></h2>
+<p>Diameter of a circle : 8<br />
 Angle measure : 45<br />
 Expected Output :<br />
-Arc Length is : 3.142857142857143</p>
-<p>Resource from <a class="reference external" href="https://www.w3resource.com/python-exercises/math/">w3resource</a></p>
+Arc Length is : 3.142857142857143\</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#python code </span>
@@ -485,11 +525,39 @@ Arc Length is : 3.142857142857143</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Diameter of circle:  8
-angle measure:  45
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Arc Length is:  3.142857142857143
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">12</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">arc_length</span> <span class="o">=</span> <span class="p">(</span><span class="n">pi</span><span class="o">*</span><span class="n">diameter</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">angle</span><span class="o">/</span><span class="mi">360</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Arc Length is: &quot;</span><span class="p">,</span> <span class="n">arc_length</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">12</span> <span class="n">arclength</span><span class="p">()</span>
+
+<span class="nn">Cell In [1], line 4,</span> in <span class="ni">arclength</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="k">def</span> <span class="nf">arclength</span><span class="p">():</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">pi</span><span class="o">=</span><span class="mi">22</span><span class="o">/</span><span class="mi">7</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">diameter</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Diameter of circle: &#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">angle</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;angle measure: &#39;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="k">if</span> <span class="n">angle</span> <span class="o">&gt;=</span> <span class="mi">360</span><span class="p">:</span>
+
+<span class="nn">File ~\miniconda3\lib\site-packages\ipykernel\kernelbase.py:1174,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1167</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
+<span class="g g-Whitespace">   </span><span class="mi">1168</span><span class="sd"> </span>
+<span class="g g-Whitespace">   </span><span class="mi">1169</span><span class="sd"> Raises</span>
+<span class="g g-Whitespace">   </span><span class="mi">1170</span><span class="sd"> ------</span>
+<span class="g g-Whitespace">   </span><span class="mi">1171</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1172</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1173</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1174</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1175</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1176</span>     <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1177</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1178</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1179</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
+<span class="g g-Whitespace">   </span><span class="mi">1180</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1181</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1182</span> <span class="p">)</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
 </pre></div>
 </div>
 </div>
@@ -515,15 +583,36 @@ angle measure:  50
 </div>
 </div>
 <p>The arc length is around 4.36</p>
+</section>
+<section id="the-math-equation-for-arc-length-2-pi-r-frac-theta-360">
+<h2>The math equation for arc length  = 2 <span class="math notranslate nohighlight">\(\pi\)</span> r (<span class="math notranslate nohighlight">\(\frac{\theta}{360}\)</span>)<a class="headerlink" href="#the-math-equation-for-arc-length-2-pi-r-frac-theta-360" title="Permalink to this headline">#</a></h2>
 <p><strong>Pictorial Presentation</strong> from <a class="reference external" href="https://www.w3resource.com/python-exercises/math/">w3resource</a></p>
 <p><img alt="Pictorial Presentation from w3resource" src="_images/python-math-image-exercise-7.svg" /></p>
-<p>The math equation for arc length  = 2 <span class="math notranslate nohighlight">\(\pi\)</span> r (<span class="math notranslate nohighlight">\(\frac{\theta}{360}\)</span>)</p>
 <p><strong>Flowchart Presentation</strong> from <a class="reference external" href="https://www.w3resource.com/python-exercises/math/">w3resource</a></p>
 <p><img alt="Flowchart Presentation from w3resource" src="_images/python-math-exercise-7.png" /></p>
 <p><strong>Question 2</strong>: Write a Python program to calculate the area of a sector.</p>
 <p>Note: A circular sector or circle sector, is the portion of a disk enclosed by two radii and an arc, where the smaller area is known as the minor sector and the larger being the major sector.</p>
-<p><strong>Test Data</strong><br />
-Radius of Circle: 4<br />
+</section>
+<section id="id1">
+<h2>Code<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>The code that we will be using is</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sectorarea</span><span class="p">():</span>
+    <span class="n">pi</span><span class="o">=</span><span class="mi">22</span><span class="o">/</span><span class="mi">7</span>
+    <span class="n">radius</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Radius of Circle: &#39;</span><span class="p">))</span>
+    <span class="n">angle</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;angle measure: &#39;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">angle</span> <span class="o">&gt;=</span> <span class="mi">360</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Angle is not possible&quot;</span><span class="p">)</span>
+        <span class="k">return</span>
+    <span class="n">sur_area</span> <span class="o">=</span> <span class="p">(</span><span class="n">pi</span><span class="o">*</span><span class="n">radius</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">angle</span><span class="o">/</span><span class="mi">360</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sector Area: &quot;</span><span class="p">,</span> <span class="n">sur_area</span><span class="p">)</span>
+
+<span class="n">sectorarea</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>Test Data<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>Radius of Circle: 4<br />
 angle measure: 45<br />
 Sector Area:  6.285714285714286</p>
 <div class="cell docutils container">
@@ -543,6 +632,15 @@ Sector Area:  6.285714285714286</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Radius of Circle:  4
+angle measure:  45
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sector Area:  6.285714285714286
+</pre></div>
+</div>
+</div>
 </div>
 <p>Next, I will test out how to find the sector area for other input</p>
 <p><strong>Test Data</strong><br />
@@ -554,12 +652,28 @@ angle measure: 50</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Radius of Circle:  7
+angle measure:  50
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sector Area:  21.38888888888889
+</pre></div>
+</div>
+</div>
 </div>
 <p>The sector area is around 21.38</p>
+</section>
+<section id="the-math-equation-for-area-of-sector-frac-theta-360-x-pi-r-2">
+<h2>The math equation for area of sector  = <span class="math notranslate nohighlight">\(\frac{\theta}{360}\)</span> x <span class="math notranslate nohighlight">\(\pi\)</span> <span class="math notranslate nohighlight">\(r^2\)</span><a class="headerlink" href="#the-math-equation-for-area-of-sector-frac-theta-360-x-pi-r-2" title="Permalink to this headline">#</a></h2>
 <p><strong>Pictorial Presentation</strong> from <a class="reference external" href="https://www.w3resource.com/python-exercises/math/">w3resource</a></p>
 <p><img alt="Pictorial Presentation from w3resource" src="_images/python-math-image-exercise-8.svg" /></p>
 <p><strong>Flowchart Presentation</strong> from <a class="reference external" href="https://www.w3resource.com/python-exercises/math/">w3resource</a></p>
 <p><img alt="Flowchart Presentation from w3resource" src="_images/python-math-exercise-8.png" /></p>
+</section>
+<section id="resource">
+<h2>Resource<a class="headerlink" href="#resource" title="Permalink to this headline">#</a></h2>
+<p>The two math questions, codes, and images are retrieved from <a class="reference external" href="https://www.w3resource.com/python-exercises/math/">w3resource</a></p>
 </section>
 </section>
 
@@ -590,17 +704,17 @@ angle measure: 50</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="markdown.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="markdown-notebooks.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Markdown Files</p>
+            <p class="prev-next-title">Notebooks with MyST Markdown</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="markdown-notebooks.html" title="next page">
+    <a class='right-next' id="next-link" href="data_exploration_project.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Notebooks with MyST Markdown</p>
+        <p class="prev-next-title">Final Project: Data Exploration of the Disney Movie datasets</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
