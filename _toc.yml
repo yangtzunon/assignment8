@@ -5,7 +5,7 @@ format: jb-book
 root: intro
 chapters:
 - file: markdown
-- file: notebooks
 - file: markdown-notebooks
+- file: interesting_math_problem
 - file: data_exploration_project
 
