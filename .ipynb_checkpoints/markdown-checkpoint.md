@@ -2,7 +2,7 @@
 
 
 ```{note}
-The content of this notebook are retrieved from the online community. Refer to the specific link for refernece. 
+The content of this notebook are retrieved from the online community. Refer to the specific links for refernece. 
 ```
 
 >The Clay Mathematics Institute (http://www.claymath.org/millennium/) of Cambridge, Massachusetts (CMI) has named seven "Millennium Prize Problems," selected by focusing on important classic questions in mathematics that have resisted solution over the years. A 7 million prize fund has been established for the solution to these problems, with 1 million allocated to each. The problems consist of the Riemann hypothesis, Poincaré conjecture, Hodge conjecture, Swinnerton-Dyer Conjecture, solution of the Navier-Stokes equations, formulation of Yang-Mills theory, and determination of whether NP-problems are actually P-problems.'
@@ -61,10 +61,6 @@ This has already been solved for a number of other shapes, such as triangles and
 **⚠Note**
 Resource retrieved from online source [Popular Mechanics](https://www.popularmechanics.com/science/g2816/5-simple-math-problems/) and Math equation from [Figures Inscribed in Curves](https://www.webpages.uidaho.edu/~markn/squares/)
 
-
-## other resource
-
-https://www.futurelearn.com/info/blog/what-is-python-used-for
 
 
 

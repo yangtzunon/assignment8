@@ -2,7 +2,7 @@
 
 
 ```{note}
-The content of this notebook are retrieved from the online community. Refer to the specific link for refernece. 
+The content of this notebook are retrieved from the online community. Refer to the specific links for refernece. 
 ```
 
 >The Clay Mathematics Institute (http://www.claymath.org/millennium/) of Cambridge, Massachusetts (CMI) has named seven "Millennium Prize Problems," selected by focusing on important classic questions in mathematics that have resisted solution over the years. A 7 million prize fund has been established for the solution to these problems, with 1 million allocated to each. The problems consist of the Riemann hypothesis, Poincaré conjecture, Hodge conjecture, Swinnerton-Dyer Conjecture, solution of the Navier-Stokes equations, formulation of Yang-Mills theory, and determination of whether NP-problems are actually P-problems.'
@@ -50,7 +50,9 @@ Draw a closed loop. The loop doesn't have to be a circle, it can be any shape yo
 
 A more exact statement of the question requires a couple of (fairly simple) definitions.
 
-A simple closed curve is the image in the plane R2 of a continuous function f: [0,1] ----> R2 that is one-to-one except that f(0) = f(1).
+A simple closed curve is the image in the plane $R^2$ of a continuous function f: [0,1] ----> R2 that is one-to-one except that 
+
+$f(0) = f(1)$
 
 
 This has already been solved for a number of other shapes, such as triangles and rectangles. But squares are tricky, and so far a formal proof has eluded mathematicians.
@@ -60,54 +62,5 @@ This has already been solved for a number of other shapes, such as triangles and
 Resource retrieved from online source [Popular Mechanics](https://www.popularmechanics.com/science/g2816/5-simple-math-problems/) and Math equation from [Figures Inscribed in Curves](https://www.webpages.uidaho.edu/~markn/squares/)
 
 
-## other resource
 
-https://www.futurelearn.com/info/blog/what-is-python-used-for
-
-
-
-
-
-
-## Sample Roles and Directives
-
-Roles and directives are two of the most powerful tools in Jupyter Book. They
-are kind of like functions, but written in a markup language. They both
-serve a similar purpose, but **roles are written in one line**, whereas
-**directives span many lines**. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.
-
-Here is a "note" directive:
-
-```{note}
-Here is a note
-```
-
-It will be rendered in a special box when you build your book.
-
-Here is an inline directive to refer to a document: {doc}`markdown-notebooks`.
-
-
-## Citations
-
-You can also cite references that are stored in a `bibtex` file. For example,
-the following syntax: `` {cite}`holdgraf_evidence_2014` `` will render like
-this: {cite}`holdgraf_evidence_2014`.
-
-Moreover, you can insert a bibliography into your page with this syntax:
-The `{bibliography}` directive must be used for all the `{cite}` roles to
-render properly.
-For example, if the references for your book are stored in `references.bib`,
-then the bibliography is inserted with:
-
-```{bibliography}
-```
-
-## Learn more
-
-This is just a simple starter to get you started.
-You can learn a lot more at [jupyterbook.org](https://jupyterbook.org).
-
-## Start here
 
