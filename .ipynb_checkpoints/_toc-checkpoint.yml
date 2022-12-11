@@ -4,8 +4,8 @@
 format: jb-book
 root: intro
 chapters:
-- file: unsolved_problems_ in_math.md
-- file: markdown-notebooks
+- file: unsolved_problems_ in_math
+- file: what_is_python_used_for
 - file: interesting_math_problem
 - file: data_exploration_project
 
