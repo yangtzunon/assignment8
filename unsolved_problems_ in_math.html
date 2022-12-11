@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome to my Jupyter Book &#8212; Wendy&#39;s First Jupyter Book</title>
+    <title>Unsolved Problems in Mathematics &#8212; Wendy&#39;s First Jupyter Book</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,9 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Unsolved Problems in Mathematics" href="unsolved_problems_%20in_math.html" />
+    <link rel="next" title="What is Python used for" href="what_is_python_used_for.html" />
+    <link rel="prev" title="Welcome to my Jupyter Book" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -106,15 +109,15 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Welcome to my Jupyter Book
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="unsolved_problems_%20in_math.html">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Unsolved Problems in Mathematics
   </a>
  </li>
@@ -223,7 +226,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Funsolved_problems_ in_math.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -251,7 +254,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/intro.md"
+        <a href="_sources/unsolved_problems_ in_math.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -288,23 +291,70 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#happy-ending-problem">
+   Happy Ending Problem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inscribed-square-problem">
+   Inscribed Square Problem
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Welcome to my Jupyter Book</h1>
+                <h1>Unsolved Problems in Mathematics</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#happy-ending-problem">
+   Happy Ending Problem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inscribed-square-problem">
+   Inscribed Square Problem
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -312,25 +362,44 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-my-jupyter-book">
-<h1>Welcome to my Jupyter Book<a class="headerlink" href="#welcome-to-my-jupyter-book" title="Permalink to this headline">#</a></h1>
-<p>This is a small Jupyter Book project for me to practice building a Jupyter Book.
-It shows off a few of the major file types, as well as some sample content.</p>
-<p>To learn more about Jupyter Book, check out <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a> for more information.</p>
-<p>Check out the content pages bundled with this sample book to see more.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="unsolved_problems_%20in_math.html">Unsolved Problems in Mathematics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="what_is_python_used_for.html">What is Python used for</a></li>
-<li class="toctree-l1"><a class="reference internal" href="what_is_python_used_for.html#python-can-be-used-for"><code class="docutils literal notranslate"><span class="pre">python</span></code> can be used for</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interesting_math_problem.html">Interesting Math Problem using Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data_exploration_project.html">Final Project: Data Exploration of the Disney Movie datasets</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data_exploration_project.html#introduction">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data_exploration_project.html#method-result">Method &amp; Result</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data_exploration_project.html#discussion">Discussion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="data_exploration_project.html#reference">Reference</a></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="unsolved-problems-in-mathematics">
+<h1>Unsolved Problems in Mathematics<a class="headerlink" href="#unsolved-problems-in-mathematics" title="Permalink to this headline">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The content of this notebook are retrieved from the online community. Refer to the specific links for refernece.</p>
 </div>
+<blockquote>
+<div><p>The Clay Mathematics Institute (<a class="reference external" href="http://www.claymath.org/millennium/">http://www.claymath.org/millennium/</a>) of Cambridge, Massachusetts (CMI) has named seven “Millennium Prize Problems,” selected by focusing on important classic questions in mathematics that have resisted solution over the years. A 7 million prize fund has been established for the solution to these problems, with 1 million allocated to each. The problems consist of the Riemann hypothesis, Poincaré conjecture, Hodge conjecture, Swinnerton-Dyer Conjecture, solution of the Navier-Stokes equations, formulation of Yang-Mills theory, and determination of whether NP-problems are actually P-problems.’</p>
+</div></blockquote>
+<blockquote>
+<div><p>In 1900, David Hilbert proposed a list of 23 outstanding problems in mathematics (Hilbert’s problems), a number of which have now been solved, but some of which remain open. In 1912, Landau proposed four simply stated problems, now known as Landau’s problems, which continue to defy attack even today. One hundred years after Hilbert, Smale (2000) proposed a list of 18 outstanding problems.</p>
+</div></blockquote>
+<p><strong>⚠Note</strong>
+Story retrieved from online source <a class="reference external" href="https://mathworld.wolfram.com/UnsolvedProblems.html">Wolfram MathWorld</a></p>
+<p>In this note book, we will take a look at two interesting ones</p>
+<section id="happy-ending-problem">
+<h2>Happy Ending Problem<a class="headerlink" href="#happy-ending-problem" title="Permalink to this headline">#</a></h2>
+<p><img alt="Happy Ending Problem" src="_images/points.png" /></p>
+<p>The happy ending problem is so named because it led to the marriage of two mathematicians who worked on it, George Szekeres and Esther Klein. Essentially, the problem works like this:</p>
+<p>Make five dots at random places on a piece of paper. Assuming the dots aren’t deliberately arranged—say, in a line—you should always be able to connect four of them to create a convex quadrilateral, which is a shape with four sides where all of the corners are less than 180 degrees. The gist of this theorem is that you’ll always be able to create a convex quadrilateral with five random dots, regardless of where those dots are positioned.</p>
+<p>So that’s how it works for four sides. But for a pentagon, a five-sided shape, it turns out you need nine dots. For a hexagon, it’s 17 dots. But beyond that, we don’t know. It’s a mystery how many dots is required to create a heptagon or any larger shapes. More importantly, there should be a formula to tell us how many dots are required for any shape.</p>
+<p>Mathematicians suspect the equation is</p>
+<p><span class="math notranslate nohighlight">\(M=1+2N-2\)</span></p>
+<p>where M is the number of dots and N is the number of sides in the shape. But as yet, they’ve only been able to prove that the answer is at least as big as the answer you get that way.</p>
+<p><strong>⚠Note</strong>
+Resource retrieved from online source <a class="reference external" href="https://www.popularmechanics.com/science/g2816/5-simple-math-problems/">Popular Mechanics</a></p>
+</section>
+<section id="inscribed-square-problem">
+<h2>Inscribed Square Problem<a class="headerlink" href="#inscribed-square-problem" title="Permalink to this headline">#</a></h2>
+<p><img alt="Inscribed Square Problem" src="_images/square.png" /></p>
+<p>Draw a closed loop. The loop doesn’t have to be a circle, it can be any shape you want, but the beginning and the end have to meet and the loop can’t cross itself. It should be possible to draw a square inside the loop so that all four corners of the square are touching the loop. According to the inscribed square hypothesis, every closed loop (specifically every plane simple closed curve) should have an inscribed square, a square where all four corners lie somewhere on the loop.</p>
+<p>A more exact statement of the question requires a couple of (fairly simple) definitions.</p>
+<p>A simple closed curve is the image in the plane <span class="math notranslate nohighlight">\(R^2\)</span> of a continuous function f: [0,1] —-&gt; R2 that is one-to-one except that</p>
+<p><span class="math notranslate nohighlight">\(f(0) = f(1)\)</span></p>
+<p>This has already been solved for a number of other shapes, such as triangles and rectangles. But squares are tricky, and so far a formal proof has eluded mathematicians.</p>
+<p><strong>⚠Note</strong>
+Resource retrieved from online source <a class="reference external" href="https://www.popularmechanics.com/science/g2816/5-simple-math-problems/">Popular Mechanics</a> and Math equation from <a class="reference external" href="https://www.webpages.uidaho.edu/~markn/squares/">Figures Inscribed in Curves</a></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -360,10 +429,17 @@ It shows off a few of the major file types, as well as some sample content.</p>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="unsolved_problems_%20in_math.html" title="next page">
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome to my Jupyter Book</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="what_is_python_used_for.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Unsolved Problems in Mathematics</p>
+        <p class="prev-next-title">What is Python used for</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -110,19 +110,19 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to your Jupyter Book
+                    Welcome to my Jupyter Book
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   Markdown Files
+  <a class="reference internal" href="unsolved_problems_%20in_math.html">
+   Unsolved Problems in Mathematics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="markdown-notebooks.html">
-   Notebooks with MyST Markdown
+  <a class="reference internal" href="what_is_python_used_for.html">
+   What is Python used for
   </a>
  </li>
  <li class="toctree-l1">
@@ -355,11 +355,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#method-result">
    Method &amp; Result
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-math-equation-in-a-glance">
-   Basic Math Equation in a Glance
-  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-math-equation-in-a-glance">
+     Basic Math Equation in a Glance
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#discussion">
@@ -404,11 +406,13 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#method-result">
    Method &amp; Result
   </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#basic-math-equation-in-a-glance">
-   Basic Math Equation in a Glance
-  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#basic-math-equation-in-a-glance">
+     Basic Math Equation in a Glance
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#discussion">
@@ -441,9 +445,8 @@ I would like to approach the question from the profitability perspective because
 <section class="tex2jax_ignore mathjax_ignore" id="method-result">
 <h1>Method &amp; Result<a class="headerlink" href="#method-result" title="Permalink to this headline">#</a></h1>
 <p>I am going to take a look at the “Disney Movie Total Gross” data set and group the genre together and see if I can find any specific trend. I clean the data that I need, use the group by and sum functions to explore the trend in this dataset.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="basic-math-equation-in-a-glance">
-<h1>Basic Math Equation in a Glance<a class="headerlink" href="#basic-math-equation-in-a-glance" title="Permalink to this headline">#</a></h1>
+<section id="basic-math-equation-in-a-glance">
+<h2>Basic Math Equation in a Glance<a class="headerlink" href="#basic-math-equation-in-a-glance" title="Permalink to this headline">#</a></h2>
 <p>Before diving into the data exploration, we need to understand the two very basic math formula first</p>
 <ol class="simple">
 <li><p>The sum of first n natural numbers is calculated using the formula</p></li>
@@ -454,35 +457,11 @@ I would like to approach the question from the profitability perspective because
 </ol>
 <p><span class="math notranslate nohighlight">\(\bar x\)</span> = <span class="math notranslate nohighlight">\(\frac{X_{1} + X_{2}+ ... +X_{n}}{n}\)</span>=<span class="math notranslate nohighlight">\(\frac{1}{n}\)</span> (<span class="math notranslate nohighlight">\(\sum \limits _{i=1} ^{n} X_{i}\)</span>)</p>
 </section>
+</section>
 <section class="tex2jax_ignore mathjax_ignore" id="discussion">
 <h1>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">#</a></h1>
 <p>My thought process and the discussion are documented throughout the document.</p>
 <p>First, I import the library that I will need in this analysis.The next step is to load the data and take a look at the different columns.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install altair
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: altair in c:\users\wendy-nb\miniconda3\lib\site-packages (4.2.0)
-Requirement already satisfied: jinja2 in c:\users\wendy-nb\miniconda3\lib\site-packages (from altair) (3.1.2)
-Requirement already satisfied: jsonschema&gt;=3.0 in c:\users\wendy-nb\miniconda3\lib\site-packages (from altair) (3.2.0)
-Requirement already satisfied: entrypoints in c:\users\wendy-nb\miniconda3\lib\site-packages (from altair) (0.4)
-Requirement already satisfied: numpy in c:\users\wendy-nb\miniconda3\lib\site-packages (from altair) (1.23.1)
-Requirement already satisfied: pandas&gt;=0.18 in c:\users\wendy-nb\miniconda3\lib\site-packages (from altair) (1.4.3)
-Requirement already satisfied: toolz in c:\users\wendy-nb\miniconda3\lib\site-packages (from altair) (0.12.0)
-Requirement already satisfied: pyrsistent&gt;=0.14.0 in c:\users\wendy-nb\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (0.18.1)
-Requirement already satisfied: attrs&gt;=17.4.0 in c:\users\wendy-nb\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (21.4.0)
-Requirement already satisfied: six&gt;=1.11.0 in c:\users\wendy-nb\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (1.16.0)
-Requirement already satisfied: setuptools in c:\users\wendy-nb\miniconda3\lib\site-packages (from jsonschema&gt;=3.0-&gt;altair) (61.2.0)
-Requirement already satisfied: pytz&gt;=2020.1 in c:\users\wendy-nb\miniconda3\lib\site-packages (from pandas&gt;=0.18-&gt;altair) (2022.4)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in c:\users\wendy-nb\miniconda3\lib\site-packages (from pandas&gt;=0.18-&gt;altair) (2.8.2)
-Requirement already satisfied: MarkupSafe&gt;=2.0 in c:\users\wendy-nb\miniconda3\lib\site-packages (from jinja2-&gt;altair) (2.1.1)
-</pre></div>
-</div>
-</div>
-</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the libraries</span>
@@ -815,7 +794,7 @@ Name: genre, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x000002360C4B0700&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x000001D7CB63CDC0&gt;
 </pre></div>
 </div>
 </div>
@@ -1088,13 +1067,13 @@ Name: inflation_adjusted_gross, dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-060e504abf3b4d23981ed5025cf0a90f"></div>
+<div id="altair-viz-55c7f391deba4c8aaa6b7a299ab6e154"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-060e504abf3b4d23981ed5025cf0a90f") {
-      outputDiv = document.getElementById("altair-viz-060e504abf3b4d23981ed5025cf0a90f");
+    if (outputDiv.id !== "altair-viz-55c7f391deba4c8aaa6b7a299ab6e154") {
+      outputDiv = document.getElementById("altair-viz-55c7f391deba4c8aaa6b7a299ab6e154");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1306,7 +1285,7 @@ Name: inflation_adjusted_gross, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x000002360F099730&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;pandas.core.groupby.generic.DataFrameGroupBy object at 0x000001D7CB693AC0&gt;
 </pre></div>
 </div>
 </div>
@@ -1580,13 +1559,13 @@ Other contributing factors could be (1) Inflation adjustment and economic condit
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-<div id="altair-viz-5d7c3db2437f41a39a39220cb77a7e15"></div>
+<div id="altair-viz-75429528cf394c36bae6cc54a7d8efb1"></div>
 <script type="text/javascript">
   var VEGA_DEBUG = (typeof VEGA_DEBUG == "undefined") ? {} : VEGA_DEBUG;
   (function(spec, embedOpt){
     let outputDiv = document.currentScript.previousElementSibling;
-    if (outputDiv.id !== "altair-viz-5d7c3db2437f41a39a39220cb77a7e15") {
-      outputDiv = document.getElementById("altair-viz-5d7c3db2437f41a39a39220cb77a7e15");
+    if (outputDiv.id !== "altair-viz-75429528cf394c36bae6cc54a7d8efb1") {
+      outputDiv = document.getElementById("altair-viz-75429528cf394c36bae6cc54a7d8efb1");
     }
     const paths = {
       "vega": "https://cdn.jsdelivr.net/npm//vega@5?noext",
@@ -1668,7 +1647,14 @@ Other contributing factors could be (1) Inflation adjustment and economic condit
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Adventure&#39;
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">script</span> <span class="k">as</span> <span class="nn">scr</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">top</span> <span class="o">=</span> <span class="n">scr</span><span class="o">.</span><span class="n">top_selling_genre</span><span class="p">(</span><span class="n">disney_gross</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">top</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;script&#39;
 </pre></div>
 </div>
 </div>

@@ -17,23 +17,19 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# import the libraries
-import pandas as pd
-import altair as alt
+import script as scr
 
-disney_gross=pd.read_csv('data/disney_movies_total_gross.csv')
-disney_gross
+top = scr.top_selling_genre(disney_gross)
+top
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [1;32mIn [1], line 3[0m
-[0;32m      1[0m [38;5;66;03m# import the libraries[39;00m
-[0;32m      2[0m [38;5;28;01mimport[39;00m [38;5;21;01mpandas[39;00m [38;5;28;01mas[39;00m [38;5;21;01mpd[39;00m
-[1;32m----> 3[0m [38;5;28;01mimport[39;00m [38;5;21;01maltair[39;00m [38;5;28;01mas[39;00m [38;5;21;01malt[39;00m
-[0;32m      5[0m disney_gross[38;5;241m=[39mpd[38;5;241m.[39mread_csv([38;5;124m'[39m[38;5;124mdata/disney_movies_total_gross.csv[39m[38;5;124m'[39m)
-[0;32m      6[0m disney_gross
+Cell [1;32mIn [16], line 1[0m
+[1;32m----> 1[0m [38;5;28;01mimport[39;00m [38;5;21;01mscript[39;00m [38;5;28;01mas[39;00m [38;5;21;01mscr[39;00m
+[0;32m      3[0m top [38;5;241m=[39m scr[38;5;241m.[39mtop_selling_genre(disney_gross)
+[0;32m      4[0m top
 
-[1;31mModuleNotFoundError[0m: No module named 'altair'
-ModuleNotFoundError: No module named 'altair'
+[1;31mModuleNotFoundError[0m: No module named 'script'
+ModuleNotFoundError: No module named 'script'
 
